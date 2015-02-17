@@ -7,6 +7,9 @@ namespace WorldServer.Game.Commands
         public static void LoadCommandDefinitions()
         {
             ConsoleManager.DefineCommand("create", ConsoleCommands.CreateAccount);
+            ConsoleManager.DefineCommand("exit", ConsoleCommands.Exit);
+            ConsoleManager.DefineCommand("help", ConsoleCommands.Help);
         }
+
     }
 }

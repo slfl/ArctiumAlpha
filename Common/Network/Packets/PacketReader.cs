@@ -19,24 +19,9 @@ namespace Common.Network.Packets
             }
         }
 
-        public sbyte ReadInt8()
-        {
-            return base.ReadSByte();
-        }
-
-        public new short ReadInt16()
-        {
-            return base.ReadInt16();
-        }
-
         public new int ReadInt32()
         {
             return base.ReadInt32();
-        }
-
-        public new long ReadInt64()
-        {
-            return base.ReadInt64();
         }
 
         public byte ReadUInt8()
@@ -64,11 +49,6 @@ namespace Common.Network.Packets
             return base.ReadSingle();
         }
 
-        public new double ReadDouble()
-        {
-            return base.ReadDouble();
-        }
-
         public string ReadString(byte terminator = 0)
         {
             StringBuilder tmpString = new StringBuilder();
@@ -89,42 +69,12 @@ namespace Common.Network.Packets
             return ReadString(0);
         }
 
-        public new byte[] ReadBytes(int count)
-        {
-            return base.ReadBytes(count);
-        }
-
-        public string ReadStringFromBytes(int count)
-        {
-            byte[] stringArray = base.ReadBytes(count);
-            Array.Reverse(stringArray);
-
-            return Encoding.ASCII.GetString(stringArray);
-        }
-
-        public string ReadIPAddress()
-        {
-            byte[] ip = new byte[4];
-
-            for (int i = 0; i < 4; ++i)
-            {
-                ip[i] = ReadUInt8();
-            }
-
-            return ip[0] + "." + ip[1] + "." + ip[2] + "." + ip[3];
-        }
-
         public string ReadAccountName()
         {
             string name = ReadString(0xD).ToUpper();
             this.ReadUInt8();
 
             return name;
-        }
-
-        public void SkipBytes(int count)
-        {
-            base.BaseStream.Position += count;
         }
     }
 }

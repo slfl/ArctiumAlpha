@@ -4,6 +4,7 @@ using System.Text;
 using Common.Account;
 using Common.Commands;
 using Common.Database.ObjectDatabase;
+using Common.Logging;
 
 namespace WorldServer.Game.Commands
 {
@@ -11,18 +12,18 @@ namespace WorldServer.Game.Commands
     {
         public static void CreateAccount(string[] args)
         {
-            string name = Read<string>(args, 0);
-            string password = Read<string>(args, 1);
+            string Name = ReadN<string>(args, 0);
+            string Password = ReadP<string>(args, 1);
 
-            if (name == null || password == null)
+            if (Name == null || Password == null)
                 return;
 
-            byte[] hash = new SHA1CryptoServiceProvider().ComputeHash(Encoding.ASCII.GetBytes(password));
+            byte[] hash = new SHA1CryptoServiceProvider().ComputeHash(Encoding.ASCII.GetBytes(Password));
             string hashString = BitConverter.ToString(hash).Replace("-", "");
 
             Account acc = new Account();
 
-            acc.Name = name.ToUpper();
+            acc.Name = Name.ToUpper();
             acc.Password = hashString;
             acc.Language = "enUS";
             acc.GMLevel = 3;
@@ -35,12 +36,26 @@ namespace WorldServer.Game.Commands
 
             foreach (Account a in result)
             {
-                if (a.Name != name)
+                if (a.Name != Name)
                 {
                     ODB.Realms.Save(acc);
                     break;
                 }
             }              
         }
+
+        public static void Exit(string[] args)
+        {
+            Environment.Exit(0);
+        }
+
+        public static void Help(string[] args)
+        {
+            Log.Message(LogType.MISC, "This Help Command!!!");
+            Log.Message(LogType.MISC, "Commands:");
+            Log.Message(LogType.MISC, "create <name> <password> - Create Account");
+            Log.Message(LogType.MISC, "exit - Stop Server");
+        }
+
     }
 }

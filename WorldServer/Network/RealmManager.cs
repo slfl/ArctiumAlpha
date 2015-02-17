@@ -31,7 +31,7 @@ namespace WorldServer.Network
         {
             PacketWriter realmWriter = new PacketWriter();
             realmWriter.WriteUInt8(1);
-            realmWriter.WriteBytes(System.Text.Encoding.ASCII.GetBytes("|cFF00FFFFAlpha Test Realm"));
+            realmWriter.WriteBytes(System.Text.Encoding.ASCII.GetBytes("|cFF00FFFF Flame-WoW"));
             realmWriter.WriteUInt8(0);
             realmWriter.WriteBytes(System.Text.Encoding.ASCII.GetBytes("127.0.0.1:9090"));
             realmWriter.WriteUInt8(0);

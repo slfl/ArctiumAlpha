@@ -50,32 +50,7 @@ namespace Common.Network.Packets
             return data;
         }
 
-        public void WriteInt8(sbyte data)
-        {
-            base.Write(data);
-        }
-
-        public void WriteInt16(short data)
-        {
-            base.Write(data);
-        }
-
-        public void WriteInt32(int data)
-        {
-            base.Write(data);
-        }
-
-        public void WriteInt64(long data)
-        {
-            base.Write(data);
-        }
-
         public void WriteUInt8(byte data)
-        {
-            base.Write(data);
-        }
-
-        public void WriteUInt16(ushort data)
         {
             base.Write(data);
         }
@@ -91,11 +66,6 @@ namespace Common.Network.Packets
         }
 
         public void WriteFloat(float data)
-        {
-            base.Write(data);
-        }
-
-        public void WriteDouble(double data)
         {
             base.Write(data);
         }

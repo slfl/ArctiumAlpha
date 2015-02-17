@@ -10,13 +10,7 @@ namespace Common.Database
     {
         public IObjectContainer Connection;
 
-        public string Database { get; set; }
         public int RowCount { get; set; }
-
-        void ObjectDBThread()
-        {
-            Connection = Db4oEmbedded.OpenFile(Database + ".aodb");
-        }
 
         public void Init(string db)
         {

@@ -12,16 +12,12 @@ namespace WorldServer
     {
         static void Main()
         {
-            Log.Message(LogType.INIT, "___________________________________________");
-            Log.Message(LogType.INIT, "    __                                     ");
-            Log.Message(LogType.INIT, "    / |                     ,              ");
-            Log.Message(LogType.INIT, "---/__|---)__----__--_/_--------------_--_-");
-            Log.Message(LogType.INIT, "  /   |  /   ) /   ' /    /   /   /  / /  )");
-            Log.Message(LogType.INIT, "_/____|_/_____(___ _(_ __/___(___(__/_/__/_");
-            Log.Message(LogType.INIT, "______________REALMPROXY/WORLD_____________");
+            Log.Message(LogType.INIT, "Flame-WoW alpha WoW Core");
+            Log.Message(LogType.INIT, "WoW 0.5.3.3368");
+            Log.Message(LogType.INIT, "By Flame-WoW Team");
             Log.Message();
 
-            Log.Message(LogType.NORMAL, "Starting Arctium Alpha WorldServer...");
+            Log.Message(LogType.NORMAL, "Starting WoW Alpha WorldServer...");
 
             ODB.Characters.Init("Characters");
             ODB.Realms.Init("Realms");
