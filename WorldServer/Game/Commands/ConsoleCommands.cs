@@ -28,17 +28,17 @@ namespace WorldServer.Game.Commands
             acc.Language = "enUS";
             acc.GMLevel = 3;
 
-            var result = ODB.Realms.Select<Account>();
-            acc.Id = (uint)ODB.Realms.RowCount + 1;
+            var result = DB.Realms.Select<Account>();
+            acc.Id = (uint)DB.Realms.RowCount + 1;
 
-            if (ODB.Realms.RowCount == 0)
-                ODB.Realms.Save(acc);
+            if (DB.Realms.RowCount == 0)
+                DB.Realms.Save(acc);
 
             foreach (Account a in result)
             {
                 if (a.Name != Name)
                 {
-                    ODB.Realms.Save(acc);
+                    DB.Realms.Save(acc);
                     break;
                 }
             }              

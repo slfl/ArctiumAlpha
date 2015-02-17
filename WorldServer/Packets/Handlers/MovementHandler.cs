@@ -44,7 +44,7 @@ namespace WorldServer.Packets.Handlers
             result.Y = Y;
             result.Z = Z;
             result.O = O;
-            ODB.Characters.Save(result);
+            DB.Characters.Save(result);
         }
     }
 }

@@ -19,8 +19,8 @@ namespace WorldServer
 
             Log.Message(LogType.NORMAL, "Starting WoW Alpha WorldServer...");
 
-            ODB.Characters.Init("Characters");
-            ODB.Realms.Init("Realms");
+            DB.Characters.Init("Characters");
+            DB.Realms.Init("Realms");
 
             RealmManager.RealmSession = new RealmSocket();
             WorldManager.WorldSession = new WorldSocket();
