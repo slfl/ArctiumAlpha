@@ -57,4 +57,11 @@
 
     SMSG_MOVE_WORLDPORT_ACK     = 0x0C7,
     MSG_MOVE_WORLDPORT_ACK      = 0x0D9,
+
+    // Unknown
+    // 447                      = 0x1BF, // Leight: 0
+    // 496                      = 0x1F0, // Leight: 0
+    // 485                      = 0x1E5, // Leight: 4
+    // 271                      = 0x10F, // Leight: 0
+
 }

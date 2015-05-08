@@ -57,7 +57,7 @@ namespace WorldServer.Packets.Handlers
             welcomeMessage.WriteUInt8(9);     // slashCmd, 9: SystemMessage
             welcomeMessage.WriteUInt32(0);    // Language: General
             welcomeMessage.WriteUInt64(0);    // Guid: 0 - ToAll???
-            welcomeMessage.WriteString("Hallo Novo :)");
+            welcomeMessage.WriteString("Welcome to Flame-WoW Server!");
             welcomeMessage.WriteUInt8(0);     // afkDND, 0: nothing
 
             manager.Send(welcomeMessage);

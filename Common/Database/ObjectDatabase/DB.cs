@@ -9,6 +9,7 @@ namespace Common.Database.ObjectDatabase
     {
         public static MySqlBase Characters = new MySqlBase();
         public static MySqlBase Realms = new MySqlBase();
+        public static MySqlBase World = new MySqlBase();
 
         // public static ObjectBase Characters = new ObjectBase();
         // public static ObjectBase Realms = new ObjectBase();
