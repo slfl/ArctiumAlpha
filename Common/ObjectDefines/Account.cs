@@ -7,12 +7,12 @@ namespace Common.ObjectDefines
 {
     public class Account
     {
-        public uint Id;
-        public string Name;
-        public string Password;
-        public string IP;
-        public byte GMLevel;
-        public string Language;
+        public uint Id { get; set; }
+        public string Name { get; set; }
+        public string Password { get; set; }
+        public string IP { get; set; }
+        public byte GMLevel { get; set; }
+        public string Language { get; set; }
 
         public static Account GetAccountByName(string name)
         {
