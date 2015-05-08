@@ -22,7 +22,7 @@ namespace WorldServer.Network
             if (Enum.IsDefined(typeof(Opcodes), pkt.Opcode))
                 Log.Message(LogType.Dump, "Recieved OPCODE: {0}, LENGTH: {1}", pkt.Opcode, pkt.Size);
             else
-                Log.Message(LogType.Dump, "UNKNOWN OPCODE: {0}, LENGTH: {1}", pkt.Opcode, pkt.Size);
+                Log.Message(LogType.Dump, "Unknown OPCODE: {0}, LENGTH: {1}", pkt.Opcode, pkt.Size);
 
             Log.Message();
             PacketManager.InvokeHandler(pkt, this, pkt.Opcode);
