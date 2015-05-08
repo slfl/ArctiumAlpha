@@ -1,8 +1,8 @@
 ﻿using System;
 using Common.Commands;
+using Common.Commands.WorldServer;
 using Common.Database.ObjectDatabase;
 using Common.Logging;
-using WorldServer.Game.Commands;
 using WorldServer.Network;
 using WorldServer.Packets;
 

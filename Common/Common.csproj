@@ -50,10 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\Account.cs" />
+    <Compile Include="ObjectDefines\Account.cs" />
     <Compile Include="Authentication\AuthLinks.cs" />
     <Compile Include="Authentication\AuthResults.cs" />
+    <Compile Include="Commands\WorldServer\CommandDefinitions.cs" />
     <Compile Include="Commands\CommandParser.cs" />
+    <Compile Include="Commands\WorldServer\ConsoleCommands.cs" />
     <Compile Include="Commands\ConsoleManager.cs" />
     <Compile Include="Configuration\Config.cs" />
     <Compile Include="Configuration\RealmConfig.cs" />
@@ -75,6 +77,9 @@
   <ItemGroup>
     <None Include="Configs\RealmServer.conf" />
     <None Include="Configs\WorldServer.conf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Account\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

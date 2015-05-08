@@ -49,8 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game\Commands\CommandDefinitions.cs" />
-    <Compile Include="Game\Commands\ConsoleCommands.cs" />
     <Compile Include="Game\ObjectStore\CharacterObject.cs" />
     <Compile Include="Game\ObjectStore\ObjectStorage.cs" />
     <Compile Include="Network\RealmManager.cs" />
@@ -78,7 +76,9 @@
   <ItemGroup>
     <Compile Include="Network\WorldSocket.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Game\Commands\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

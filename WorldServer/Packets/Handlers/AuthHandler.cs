@@ -2,7 +2,7 @@
 using Common.Logging;
 using Common.Network.Packets;
 using WorldServer.Network;
-using Common.Account;
+using Common.ObjectDefines;
 
 namespace WorldServer.Packets.Handlers
 {

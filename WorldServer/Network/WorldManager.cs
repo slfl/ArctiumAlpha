@@ -4,7 +4,7 @@ using System.Threading;
 using Common.Logging;
 using Common.Network.Packets;
 using WorldServer.Packets;
-using Common.Account;
+using Common.ObjectDefines;
 
 namespace WorldServer.Network
 {
