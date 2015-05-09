@@ -59,11 +59,18 @@
     MSG_MOVE_WORLDPORT_ACK      = 0x0D9,
 
     // Unknown
-    // 447                      = 0x1BF, // Leight: 0
+    // 447                      = 0x1BF, // Leight: 0,  From Login(Enter world).
     // 496                      = 0x1F0, // Leight: 0
-    // 485                      = 0x1E5, // Leight: 4, Change location.
-    // 271                      = 0x10F, // Leight: 0, From logout and Quit.
+    // 485                      = 0x1E5, // Leight: 4,  Change location.
+    // 271                      = 0x10F, // Leight: 0,  From logout.
     // 201                      = 0x0C9, // Leight: 60, Use move and jump...
-    // 304                      = 0x0C9, // Leight: 8, Target character use F1
-
+    // 304                      = 0x130, // Leight: 8,  Target character use F1
+    // 102                      = 0x066, // Leight: 0,  Open Friend list.
+    // 98                       = 0x062, // Leight: 26, Who > use button [Refresh].
+    // 108                      = 0x06C, // Leight: 1,  (leight nick)+1, Add ignore player.
+    // 105                      = 0x069, // Leight: 1,  (leight nick)+1, Add Friend.
+    // 497                      = 0x1F1, // Leight: 4,  Who > I would like to join a group.
+    // 247                      = 0x0F7, // Leight: 12, All emote's.
+    // 468                      = 0x1D4, // Leight: 4,  Speech > all speech..
+    // 418                      = 0x1A2, // Leight: 8,  Open Talents.
 }
