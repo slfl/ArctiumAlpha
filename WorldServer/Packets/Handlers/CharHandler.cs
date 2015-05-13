@@ -71,7 +71,7 @@ namespace WorldServer.Packets.Handlers
             cha.FacialHair = packet.ReadByte();
             packet.ReadByte();
 
-            var result = ODB.Characters.Select<Character>();
+            var result = DB.Characters.Select<Character>();
             PacketWriter writer = new PacketWriter(Opcodes.SMSG_CHAR_CREATE);
 
             foreach (Character c in result)
@@ -86,8 +86,8 @@ namespace WorldServer.Packets.Handlers
             }
 
             cha.AccountId = manager.account.Id;
-            cha.Guid = (ulong)(ODB.Characters.RowCount + 1);
-            ODB.Characters.Save(cha);
+            cha.Guid = (ulong)(DB.Characters.RowCount + 1);
+            DB.Characters.Save(cha);
 
             // Success
             writer.WriteUInt8(0x28);
@@ -103,7 +103,7 @@ namespace WorldServer.Packets.Handlers
             writer.WriteUInt8(0x2C);
             manager.Send(writer);
 
-            ODB.Characters.Delete(character);
+            DB.Characters.Delete(character);
         }
     }
 }

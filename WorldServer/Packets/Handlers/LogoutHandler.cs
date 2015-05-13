@@ -16,7 +16,7 @@ namespace WorldServer.Packets.Handlers
 
             var result = CharacterObject.GetOnlineCharacter(manager.account);
             result.IsOnline = false;
-            ODB.Characters.Save(result);
+            DB.Characters.Save(result);
         }
     }
 }

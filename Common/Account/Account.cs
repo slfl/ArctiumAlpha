@@ -17,7 +17,7 @@ namespace Common.Account
         public static Account GetAccountByName(string name)
         {
             Account acc = null;
-            var conn = ODB.Realms.Connection;
+            var conn = DB.Realms.Connection;
             var account = from Account a in conn where a.Name == name select a;
 
             foreach (Account a in account)
