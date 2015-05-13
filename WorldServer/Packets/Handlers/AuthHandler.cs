@@ -13,7 +13,7 @@ namespace WorldServer.Packets.Handlers
             packet.ReadUInt32();
             packet.ReadUInt32();
 
-            string name = packet.ReadAccountName();
+            string name = packet.ReadAccountName(); // Error!!!
             Account account = Account.GetAccountByName(name);
 
             PacketWriter writer = new PacketWriter(Opcodes.SMSG_AUTH_RESPONSE);

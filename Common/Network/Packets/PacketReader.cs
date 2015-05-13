@@ -58,7 +58,7 @@ namespace Common.Network.Packets
             while (tmpChar != tmpEndChar)
             {
                 tmpString.Append(tmpChar);
-                tmpChar = base.ReadChar();
+                tmpChar = base.ReadChar(); // Error!!!
             }
 
             return tmpString.ToString();
@@ -71,7 +71,7 @@ namespace Common.Network.Packets
 
         public string ReadAccountName()
         {
-            string name = ReadString(0xD).ToUpper();
+            string name = ReadString(0xD).ToUpper(); // Error!!!
             this.ReadUInt8();
 
             return name;
