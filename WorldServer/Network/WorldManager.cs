@@ -25,7 +25,7 @@ namespace WorldServer.Network
                 Log.Message(LogType.DUMP, "UNKNOWN OPCODE: {0}, LENGTH: {1}", pkt.Opcode, pkt.Size);
 
             Log.Message();
-            PacketManager.InvokeHandler(pkt, this, pkt.Opcode); // Error!!!
+            PacketManager.InvokeHandler(pkt, this, pkt.Opcode);
             Log.Message();
         }
 
@@ -48,7 +48,7 @@ namespace WorldServer.Network
                     buffer = new byte[socket.Available];
                     socket.Receive(buffer, buffer.Length, SocketFlags.None);
 
-                    OnData(); // Error!!!
+                    OnData();
                 }
             }
 

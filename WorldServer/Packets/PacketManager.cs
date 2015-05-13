@@ -18,7 +18,7 @@ namespace WorldServer.Packets
         {
             if (OpcodeHandlers.ContainsKey(opcode))
             {
-                OpcodeHandlers[opcode].Invoke(ref reader, ref manager); // Error!!!
+                OpcodeHandlers[opcode].Invoke(ref reader, ref manager);
                 return true;
             }
             else

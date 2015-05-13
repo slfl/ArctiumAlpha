@@ -58,7 +58,7 @@ namespace Common.Network.Packets
             while (tmpChar != tmpEndChar)
             {
                 tmpString.Append(tmpChar);
-                tmpChar = base.ReadChar(); // Error!!!
+                tmpChar = base.ReadChar(); // Error!!! - use UTF-8
             }
 
             return tmpString.ToString();
@@ -71,7 +71,7 @@ namespace Common.Network.Packets
 
         public string ReadAccountName()
         {
-            string name = ReadString(0xD).ToUpper(); // Error!!!
+            string name = ReadString(0xD).ToUpper(); // Error!!! - use UTF-8
             this.ReadUInt8();
 
             return name;
