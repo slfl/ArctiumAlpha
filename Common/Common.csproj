@@ -55,6 +55,9 @@
     <Compile Include="Authentication\AuthResults.cs" />
     <Compile Include="Commands\CommandParser.cs" />
     <Compile Include="Commands\ConsoleManager.cs" />
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="Configuration\RealmConfig.cs" />
+    <Compile Include="Configuration\WorldConfig.cs" />
     <Compile Include="Constans\AuthCodes.cs" />
     <Compile Include="Constans\ObjectFields.cs" />
     <Compile Include="Constans\Opcodes.cs" />
@@ -69,7 +72,10 @@
     <Compile Include="Structs\Character.cs" />
     <Compile Include="Structs\RealmList.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Configs\RealmServer.conf" />
+    <None Include="Configs\WorldServer.conf" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

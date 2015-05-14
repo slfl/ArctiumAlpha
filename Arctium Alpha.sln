@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldServer", "WorldServer\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{63268176-7FF9-4B3E-AAAD-CC7C329F924A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer", "AuthServer\AuthServer.csproj", "{AA3C302A-2DAB-47FC-8C82-99AD06E41BB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer", "AuthServer\AuthServer.csproj", "{4BF2A09E-6C45-47F7-A4C1-DF177A797730}"
 	ProjectSection(ProjectDependencies) = postProject
 		{63268176-7FF9-4B3E-AAAD-CC7C329F924A} = {63268176-7FF9-4B3E-AAAD-CC7C329F924A}
 	EndProjectSection
@@ -26,10 +26,10 @@ Global
 		{63268176-7FF9-4B3E-AAAD-CC7C329F924A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63268176-7FF9-4B3E-AAAD-CC7C329F924A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63268176-7FF9-4B3E-AAAD-CC7C329F924A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AA3C302A-2DAB-47FC-8C82-99AD06E41BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA3C302A-2DAB-47FC-8C82-99AD06E41BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA3C302A-2DAB-47FC-8C82-99AD06E41BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA3C302A-2DAB-47FC-8C82-99AD06E41BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BF2A09E-6C45-47F7-A4C1-DF177A797730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF2A09E-6C45-47F7-A4C1-DF177A797730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF2A09E-6C45-47F7-A4C1-DF177A797730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF2A09E-6C45-47F7-A4C1-DF177A797730}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
