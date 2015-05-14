@@ -37,6 +37,10 @@
     <Reference Include="Db4objects.Db4o.Linq">
       <HintPath>Libs\ObjectDB\Db4objects.Db4o.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.8.1.0, Culture=neutral, PublicKeyToken=3f6724adddb17c60, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
