@@ -16,7 +16,7 @@ namespace Common.Commands
             }
             catch
             {
-                Log.Message(LogType.ERROR, "Wrong Name");
+                Log.Message(LogType.Error, "Wrong Name");
             }
 
             return default(T);
@@ -30,7 +30,7 @@ namespace Common.Commands
             }
             catch
             {
-                Log.Message(LogType.ERROR, "Wrong Password");
+                Log.Message(LogType.Error, "Wrong Password");
             }
 
             return default(T);

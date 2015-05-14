@@ -28,7 +28,7 @@ namespace Common.Database
             }
             catch (Exception ex)
             {
-                Log.Message(LogType.ERROR, "{0}", ex.Message);
+                Log.Message(LogType.Error, "{0}", ex.Message);
                 return false;
             }
         }
@@ -44,7 +44,7 @@ namespace Common.Database
             }
             catch (Exception ex)
             {
-                Log.Message(LogType.ERROR, "{0}", ex.Message);
+                Log.Message(LogType.Error, "{0}", ex.Message);
                 return false;
             }
         }

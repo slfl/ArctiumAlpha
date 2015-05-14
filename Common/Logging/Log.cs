@@ -6,7 +6,7 @@ namespace Common.Logging
     {
         static public void Message()
         {
-            SetLogger(LogType.DEFAULT, "");
+            SetLogger(LogType.Default, "");
         }
 
         static public void Message(LogType type, string text, params object[] args)
@@ -18,36 +18,33 @@ namespace Common.Logging
         {
             switch (type)
             {
-                case LogType.NORMAL:
+                case LogType.Normal:
                     Console.ForegroundColor = ConsoleColor.Green;
                     text = text.Insert(0, "System: ");
                     break;
-                case LogType.ERROR:
+                case LogType.Error:
                     Console.ForegroundColor = ConsoleColor.Red;
                     text = text.Insert(0, "Error: ");
                     break;
-                case LogType.DUMP:
+                case LogType.Dump:
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     break;
-                case LogType.INIT:
+                case LogType.Init:
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     break;
-                case LogType.MISC:
-                    Console.ForegroundColor = ConsoleColor.DarkBlue;
-                    break;
-                case LogType.CMD:
+                case LogType.Cmd:
                     Console.ForegroundColor = ConsoleColor.Green;
                     break;
-                case LogType.DEBUG:
+                case LogType.Debug:
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     break;
                 default:
                     break;
             }
 
-            if (type.Equals(LogType.INIT) | type.Equals(LogType.DEFAULT))
+            if (type.Equals(LogType.Init) | type.Equals(LogType.Default))
                 Console.WriteLine(text, args);
-            else if (type.Equals(LogType.DUMP) || type.Equals(LogType.CMD))
+            else if (type.Equals(LogType.Dump) || type.Equals(LogType.Cmd))
                 Console.Write(text, args);
             else
                 Console.WriteLine("[" + DateTime.Now.ToLongTimeString() + "] " + text, args);

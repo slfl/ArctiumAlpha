@@ -14,7 +14,7 @@ namespace WorldServer.Network
         public void HandleProxyConnection(RealmManager Session)
         {
             Log.Message();
-            Log.Message(LogType.NORMAL, "Begin redirection to WorldServer.");
+            Log.Message(LogType.Normal, "Begin redirection to WorldServer.");
 
             PacketWriter proxyWriter = new PacketWriter();
             proxyWriter.WriteBytes(System.Text.Encoding.ASCII.GetBytes("127.0.0.1:8100"));
@@ -23,7 +23,7 @@ namespace WorldServer.Network
             Session.Send(proxyWriter, proxySocket);
             proxySocket.Close();
 
-            Log.Message(LogType.NORMAL, "Successfully redirected to WorldServer");
+            Log.Message(LogType.Normal, "Successfully redirected to WorldServer");
             Log.Message();
         }
         
@@ -61,7 +61,7 @@ namespace WorldServer.Network
             }
             catch (Exception e)
             {
-                Log.Message(LogType.ERROR, "{0}", e.Message);
+                Log.Message(LogType.Error, "{0}", e.Message);
                 Log.Message();
                 socket.Close();
             }

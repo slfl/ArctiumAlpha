@@ -1,12 +1,11 @@
 ﻿public enum LogType
 {
-    NORMAL  = 0,
-    ERROR   = 1,
-    DUMP    = 2,
-    INIT    = 3,
-    MISC    = 4,
-    CMD     = 5,
-    DEBUG   = 6,
-
-    DEFAULT = 0xFF
+    Normal = 0x1,
+    Error = 0x2,
+    Dump = 0x4,
+    Init = 0x8,
+    DB = 0x10,
+    Cmd = 0x20,
+    Debug = 0x40,
+    Default = 0x80
 };

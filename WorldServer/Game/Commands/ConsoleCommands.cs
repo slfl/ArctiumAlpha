@@ -51,10 +51,10 @@ namespace WorldServer.Game.Commands
 
         public static void Help(string[] args)
         {
-            Log.Message(LogType.MISC, "This Help Command!!!");
-            Log.Message(LogType.MISC, "Commands:");
-            Log.Message(LogType.MISC, "create <name> <password> - Create Account");
-            Log.Message(LogType.MISC, "exit - Stop Server");
+            Log.Message(LogType.Debug, "This Help Command!!!");
+            Log.Message(LogType.Debug, "Commands:");
+            Log.Message(LogType.Debug, "create <name> <password> - Create Account");
+            Log.Message(LogType.Debug, "exit - Stop Server");
         }
 
     }

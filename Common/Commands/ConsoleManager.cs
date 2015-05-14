@@ -15,7 +15,7 @@ namespace Common.Commands
             while (true)
             {
                 Thread.Sleep(1);
-                Log.Message(LogType.DUMP, "Flame-WoW >> ");
+                Log.Message(LogType.Dump, "Flame-WoW >> ");
 
                 string[] line = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.None);
                 string[] args = new string[line.Length - 1];

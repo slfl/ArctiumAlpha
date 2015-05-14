@@ -20,9 +20,9 @@ namespace WorldServer.Network
             PacketReader pkt = new PacketReader(buffer);
 
             if (Enum.IsDefined(typeof(Opcodes), pkt.Opcode))
-                Log.Message(LogType.DUMP, "Recieved OPCODE: {0}, LENGTH: {1}", pkt.Opcode, pkt.Size);
+                Log.Message(LogType.Dump, "Recieved OPCODE: {0}, LENGTH: {1}", pkt.Opcode, pkt.Size);
             else
-                Log.Message(LogType.DUMP, "UNKNOWN OPCODE: {0}, LENGTH: {1}", pkt.Opcode, pkt.Size);
+                Log.Message(LogType.Dump, "UNKNOWN OPCODE: {0}, LENGTH: {1}", pkt.Opcode, pkt.Size);
 
             Log.Message();
             PacketManager.InvokeHandler(pkt, this, pkt.Opcode);
@@ -63,12 +63,12 @@ namespace WorldServer.Network
             {
                 socket.BeginSend(buffer, 0, buffer.Length, SocketFlags.None, new AsyncCallback(FinishSend), socket);
 
-                Log.Message(LogType.DUMP, "Send {0}.", packet.Opcode);
+                Log.Message(LogType.Dump, "Send {0}.", packet.Opcode);
                 Log.Message();
             }
             catch (Exception ex)
             {
-                Log.Message(LogType.ERROR, "{0}", ex.Message);
+                Log.Message(LogType.Error, "{0}", ex.Message);
                 Log.Message();
                 socket.Close();
             }
